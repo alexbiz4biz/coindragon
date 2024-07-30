@@ -1,6 +1,7 @@
-import Chart from 'react-apexcharts'
-
 import {useEffect, useState} from 'react'
+import dynamic from 'next/dynamic'
+
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 const Holdings = ({tokens}) => {
 
@@ -58,7 +59,8 @@ const Holdings = ({tokens}) => {
 		      }}
 		      series={balances ? balances : defaultBalances}
 		      type="pie"
-		      height={300}
+		      height="300"
+		      width="100%"
 
 		    />
 

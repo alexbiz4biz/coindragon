@@ -1,6 +1,7 @@
-import Chart from 'react-apexcharts'
-
 import {useEffect, useState} from 'react'
+import dynamic from 'next/dynamic'
+
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 
 const Values = ({ tokens }) => {
@@ -116,7 +117,7 @@ const Values = ({ tokens }) => {
 		  	]}
 		  	type="line"
 		  	height="300"
-
+		  	width="100%"
 		  />
 
 		  </div>
