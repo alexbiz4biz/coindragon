@@ -42,7 +42,7 @@ export default function Home() {
 
 
     // Fetch token details via API request (we just need contract address)
-    const ROOT_URL = 'http://api.coingecko.com/api/v3'
+    const ROOT_URL = 'https://api.coingecko.com/api/v3'
     const TOKEN_ENDPOINT = `/coins/${id}`
     const TOKEN_ARGUMENTS = `?tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`
 
